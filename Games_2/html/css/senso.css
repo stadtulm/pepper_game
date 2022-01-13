@@ -1,0 +1,149 @@
+*{
+	font-family:Calibri,Verdana,Arial;
+}
+
+body{
+	background:linear-gradient(to bottom right,#75c5ff 0%, white 100%);
+	/*zoom:67% !important;*/
+}
+
+body, html{
+	
+    /*fix black bar*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+div#head{
+	position:relative;
+	top:2%;
+	left:0%;
+	width:100%;
+	height:170px;
+	border-radius:3px;
+}
+
+div#head img#entr{
+	position:absolute;
+	right:10px;
+	top:0px;
+}
+
+div#spielfeld{
+	position:relative;
+	width:80vw;
+	top:5vh;
+	left:15vw;
+	height:60vw;
+	background:white;
+	border:1px solid cyan;
+	
+}
+
+div#sprechblase{
+	position:absolute;
+	top:100px;
+	right:360px;
+	border:3px solid #848484;
+	border-radius:120px 45px 120px 120px;
+	height:270px;
+	width:340px;
+	padding:4px;
+	display:none;
+}
+
+div#sprechblase div#sprechblase-msg{
+	font-size:64px;
+	font-weight:bold;
+	color:#24a4c4;
+	position:absolute;
+	top:10%;
+	left:20%;
+	width:280px;
+}
+
+div#sprechblase-x{
+	position:absolute;
+	top:30px;
+	right:-41px;
+	width:0px;
+	height:0px;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 40px solid #848484;
+	
+}
+
+div#sprechblase-x2{
+	position:absolute;
+	top:33px;
+	right:-33px;
+	width:0px;
+	height:0px;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-top: 35px solid white;
+	z-index:2;
+}
+
+div#sprechblase-x3{
+	background-color:white;
+	border:0px;
+	height:35px;
+	width:36px;
+	position:absolute;
+	top:30px;
+	right:2px;
+	z-index:3;
+}
+
+
+div#blau{
+	height:300px;
+	width:350px;
+	position:absolute;
+	top:50px;
+	left:150px;
+	background:linear-gradient(to bottom right, rgb(73,119,224) 0%, rgb(197,211,245)100%); 
+	border-radius:150px 10px 10px 10px;
+	box-shadow:#848484 4px 4px;
+}
+
+div#gelb{
+	height:300px;
+	width:350px;
+	position:absolute;
+	top:50px;
+	left:525px;
+	background:linear-gradient(to bottom left, rgb(213,187,11) 0%, rgb(249,236,145)100%); 
+	border-radius:10px 150px 10px 10px;
+	box-shadow:#848484 -4px 4px;
+}
+
+div#gruen{
+	height:300px;
+	width:350px;
+	position:absolute;	
+	top:375px;
+	left:525px;
+	background:linear-gradient(to bottom left, rgb(73,224,119) 0%, rgb(197,245,211)100%); 
+	border-radius:10px 10px 150px 10px;
+	box-shadow:#848484 -4px -4px;
+}
+
+div#rot{
+	height:300px;
+	width:350px;
+	position:absolute;
+	top:375px;
+	left:150px;
+	background:linear-gradient(to bottom left, rgb(224,73,119) 0%, rgb(245,211,197)100%); 
+	border-radius:10px 10px 10px 150px;
+	box-shadow:#848484 	4px -4px;
+}
+
+.sensor.blink{
+	opacity:0.4;
+}

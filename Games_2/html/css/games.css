@@ -1,0 +1,410 @@
+
+
+body, html{
+	
+    /*fix black bar*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+	div#spielfeld{
+	position:relative;
+	width:88vw;
+	top: 0;
+
+	
+	height:50vh;
+	text-align: center;
+		margin: 0 auto;
+	
+	}
+	
+	div#pepperimg{
+		
+	background-image:url(../img/pepper_ld-12-mitlogo.png);
+	position:absolute;
+	top:5vh;
+	left:0vw;
+	height:100%;
+	width:35%;
+	background-position:0vw 0vh;
+	background-size:100%;
+	background-repeat:no-repeat;
+	}
+	
+	div#blau{
+    height: 27vh;
+    
+    position: relative;
+    display: inline-block;
+ 
+    border-radius: 150px 10px 10px 10px;
+    
+    float: left;
+    
+		   background: rgba(5,129,232,0.9);
+		box-shadow: #848484 0px 0px 2vh;
+		width: 40vw;
+    margin: 1vw;
+		border: 1vw solid rgba(255, 255, 255, 0.38);
+}
+
+div#gelb{
+	position: relative;
+	display: inline-block;
+	height:27vh;
+	width:27vw;
+
+	
+	border-radius:10px 150px 10px 10px;
+	box-shadow:#848484 -4px 4px;
+			float: left;
+		margin: 10px;
+	    border: 5px solid rgba(255, 255, 255, 0.38);
+		   background: rgba(238, 179, 5, 0.9098039215686274);
+		box-shadow: #848484 0px 0px 20px;
+		width: 40vw;
+			box-shadow: #848484 0px 0px 2vh;
+		box-shadow: #848484 0px 0px 2vh;
+		width: 40vw;
+    margin: 1vw;
+		border: 1vw solid rgba(255, 255, 255, 0.38);
+	
+}
+
+div#gruen{
+	height:27vh;
+	width:27vw;
+	position: relative;
+	display: inline-block;
+	
+	border-radius:10px 10px 150px 10px;
+	box-shadow:#848484 -4px -4px;
+			float: left;
+	margin: 10px;
+	    border: 5px solid rgba(255, 255, 255, 0.38);
+		   background: rgba(5, 238, 121, 0.9098039215686274);
+		box-shadow: #848484 0px 0px 20px;
+		width: 40vw;
+	box-shadow: #848484 0px 0px 2vh;
+		width: 40vw;
+    margin: 1vw;
+		border: 1vw solid rgba(255, 255, 255, 0.38);
+}
+
+div#rot{
+	height:27vh;
+	width:27vw;
+	position: relative;
+	display: inline-block;
+	
+	border-radius:10px 10px 10px 150px;
+	box-shadow:#848484 	4px -4px;
+			float: left;
+			margin: 10px;
+	    border: 5px solid rgba(255, 255, 255, 0.38);
+		   background: rgba(238, 5, 5, 0.9098039215686274);
+		box-shadow: #848484 0px 0px 20px;
+		width: 40vw;
+			box-shadow: #848484 0px 0px 2vh;
+		width: 40vw;
+    margin: 1vw;
+		border: 1vw solid rgba(255, 255, 255, 0.38);
+}
+
+.sensor.blink{
+	opacity:0.4;
+}
+
+	div#spielfeld4g{
+    position: relative;
+    top: 0vh;
+    left: 50vw;
+    height: 55vh;
+    width: 60vw;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* background: radial-gradient(circle at center, #f1f1f1 0%, #dadada 70%, #dadada 90%, #b4b4b4 100%); */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0px 0px 40px #ccc;
+    margin-left: -31vw;
+    padding: 2vw;
+	}
+	
+	div.spalte4g{
+		position:relative;
+		margin-left:1%;
+		height:100%;
+		width:15%;
+		display:inline-block;
+	}
+
+
+
+.gamelogo {
+
+	margin: 0 auto;
+	height: 12.5vh;
+	margin-top: 10vh;
+	text-align: center;
+}
+
+.gamelogo img {
+
+	height: 12.5vh;
+	text-align: center;
+}
+
+.vier {
+	background: url("../img/logo_viergewinnt.png") no-repeat;
+	background-size: contain;
+}
+
+.threeshells {
+	background: url("../img/logo_threeshells.png") no-repeat;
+	background-size: contain;
+}
+	
+	div.spalte4g div.kreis{
+	display: block;
+    margin: 6% 25%;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 4vh;
+    background: white;
+    /* box-shadow: -4px 0px black; */
+    position: absolute;
+	
+	}
+	
+	div.kreis.row1{
+		top:1%;
+	}
+	
+	div.kreis.row2{
+		top:15%;
+	}
+	div.kreis.row3{
+		top:29%;
+	}
+	div.kreis.row4{
+		top:43%;
+	}
+	div.kreis.row5{
+		top:57%;
+	}
+	div.kreis.row6{
+		top:71%;
+	}
+	div.kreis.row7{
+		top:85%;
+	}
+	
+	div.spalte4g div.kreis.red{
+		background: #ee8133;
+	}
+	
+	div.spalte4g div.kreis.green{
+		background: #33aeee;
+	}
+	
+	
+	div#redkreis{
+		width:7vh;
+		height:7vh;
+		border-radius:4vh;
+		
+		position:absolute;
+		background: #ee8133;
+		
+		
+	}
+	
+	div#greenkreis{
+		width:7vh;
+		height:7vh;
+		border-radius:4vh;
+		background-color:green;
+		position:absolute;
+		background: #33aeee;
+		
+	}
+	
+	div.kreis.red .glow{
+		height:8vh;
+		width:8vh;
+		border-radius:4vh;
+		box-shadow:0 0 15px 15px rgba(255,220,220, 1.0);
+		z-index:14;
+		opacity:1.0;
+	}
+	
+	div.kreis.green .glow{
+		height:8vh;
+		width:8vh;
+		border-radius:4vh;
+		box-shadow: 0 0 15px 15px rgba(220,255,220, 1.0);
+		z-index:14;
+		opacity:1.0;
+	}
+	
+div#ttt-board {
+    position: relative;
+    top: -10vh;
+    /* left: 24vw; */
+    height: 88vh;
+    width: 72vw;
+    margin: 0 auto;
+}
+	
+	div.border-vert{
+		
+		position:absolute;
+		height:75%;
+		width:1%;
+		/*background:linear-gradient(to bottom, white 0%, black 20%, black 80%, white 100%);*/
+		background:black;
+	}
+	
+	div.border-hor{
+		
+		position:absolute;
+		height:1%;
+		width:74%;
+		margin-left:-2%;
+		/*background:linear-gradient(to left, white 0%, black 20%, black 80%, white 100%);*/
+		background:black;
+	}
+	
+	canvas{
+		background:#dadada;
+		position:absolute;
+	}
+	
+	canvas.cactive{
+		background-color:#cacaea;
+	}
+	
+	div.turntaken{
+		background:white;
+		position:absolute;
+		background-repeat:no-repeat;
+		background-position:center;
+		height:21%;
+		width:21%;
+	}
+	
+	div.turntaken.o{
+		background-image:url(../img/o.png);
+	}
+	
+	div.turntaken.x{
+		background-image:url(../img/x.png);
+	}
+	div.turntaken.winningLine{
+		background-color:#caeaca;
+	}
+	
+	
+	canvas#col,div.turntaken#dol{
+		top:13%;
+		left:18%;
+	}
+	
+	canvas#com,div.turntaken#dom{
+		top:13%;
+		left:42.5%;
+	}
+	
+	canvas#cor,div.turntaken#dor{
+		top:13%;
+		left:67%;
+	}
+	
+	canvas#cml,div.turntaken#dml{
+		top:37%;
+		left:18%;
+	}
+	
+	canvas#cmm,div.turntaken#dmm{
+		top:37%;
+		left:42.5%;
+	}
+	
+	canvas#cmr,div.turntaken#dmr{
+		top:37%;
+		left:67%;
+	}
+	
+	canvas#cul,div.turntaken#dul{
+		top:62%;
+		left:18%;
+	}
+	
+	canvas#cum,div.turntaken#dum{
+		top:62%;
+		left:42.5%;
+	}
+	
+	canvas#cur,div.turntaken#dur{
+		top:62%;
+		left:67%;
+	}
+	
+	
+div#huetchenfeld{
+position: relative;
+    top: 0;
+    left: 4vw;
+    height: 50vh;
+    width: 88vw;
+	}
+	
+	div#huetchenfeld div#ball{
+		
+		position:absolute;
+		top:40vh;
+		height:8vh;
+		width:8vh;
+		background: rgb(238, 128, 5);
+		border-radius:4vh;
+		opacity:0.0;
+	}
+	
+	div#huetchenfeld div#ball.pos1{
+		left:15vw;
+	}
+	
+	div#huetchenfeld div#ball.pos2{
+		left:45vw;
+	}
+	
+	div#huetchenfeld div#ball.pos3{
+		left:75vw;
+	}
+	
+	div#huetchenfeld div.huetchen{
+		position:absolute;
+		top:50%;
+		height:35vh;
+		width:25vw;
+		background-size:100%;
+		background-repeat:no-repeat;
+		background-image:url(../img/hut.png);
+		background-position:center;
+		z-index:7;
+	}
+	
+	div#huetchenfeld div.huetchen#hut1{
+		left:5vw;
+	}
+	
+	div#huetchenfeld div.huetchen#hut2{
+		left:35vw;
+	}
+	
+	div#huetchenfeld div.huetchen#hut3{
+		left:65vw;
+	}

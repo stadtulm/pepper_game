@@ -1,0 +1,116 @@
+*{
+	font-family:Calibri,Verdana,Arial;
+}
+body{
+	position: relative;
+	overflow: hidden;
+		background:url(../img/artistic_bg.png) left top no-repeat;
+		background-size:cover;
+		
+		background-size:100%;
+		height:100vh;
+		width:100vw;
+		position:absolute;
+		top:0vh;
+		left:0vw;
+		z-index:4;
+	}
+
+body, html{
+	
+    /*fix black bar*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+div#bg{
+		background-image:url(../img/artistic_bg.png) left top no-repeat;
+		background-size:cover;
+		
+		background-size:100%;
+		height:100vh;
+		width:100vw;
+		position:absolute;
+		top:0vh;
+		left:0vw;
+		z-index:4;
+}
+
+div#bg.corner{
+		top:4vh;
+		left:5vw;
+		height:16vh;
+		width:16vw;
+}
+
+
+	
+	div#veil{
+		
+		width:100vw;
+		height:100vh;
+		position:fixed;
+		z-index:12;
+		top:0px;
+		left:0px;
+		background-color:#dadada;
+		opacity:0.0;
+	}
+	
+	div#veil.grey{
+		
+		background-color:#727272;
+		opacity:0.0;
+	}
+	
+	
+
+	h1{
+		position:relative;
+		top:5vh;
+		width:100vw;
+		text-align:center;
+	}
+	
+
+	div#dekoline{
+		position:absolute;
+		top:4vh;
+		left:4vw;
+		width:92vw;
+		height:13vh;
+		background-image: linear-gradient(to right,rgb(255,255,255) 0%,rgb(105,182,201) 60%, rgb(105,182,201) 100%);
+		background-repeat: no-repeat;
+		background-position:left center;
+		border-radius:10px;
+		
+	}
+	
+	div#dekoline.hidden{
+		
+		opacity:0.0;
+	}
+	
+	div#content{
+		position:absolute;
+		top:21vh;
+		left:7vw;
+		height:68vh;
+		width:80vw;
+		padding:1vh 9vw;
+		background:white;
+	}
+	
+	
+	div.x-close{
+		position:absolute;
+		top:1.5vh;
+		right:5vw;
+		height:64px;
+		width:64px;
+		background-image:url(../img/back.png);
+		background-repeat:no-repeat;
+		background-size:64px 64px;
+	}

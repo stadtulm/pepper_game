@@ -1,0 +1,131 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport"
+    content="initial-scale = 1.333,
+    minimum-scale = 1.333,
+    maximum-scale = 1.333" />
+
+<body>
+
+
+<p style="position:absolute;left:100px;bottom:10px;width:1200;font-size:35px" id='cons'> </p>
+
+<script src="libs/qimessaging/2/qimessaging.js"></script>
+<script src="p5.js"></script>
+<script src="p5.dom.js"></script>
+
+<script type="text/javascript">
+
+
+game=[]
+errorstring = '';
+
+function setup(){
+	createCanvas(1280,800);
+	background(200);
+	mittex = 640;
+	mittey = 400;
+	 //game[0] 
+	abstandx = 20;
+	abstandy = 30;
+	laenge = 30;
+	
+
+	s1 = createSlider(1,4);
+	s1.position(1000,450);
+	s2 = createSlider(1,7);
+	s2.position(1000,500);
+	button = createButton('NIM');
+  	button.position(1050, 550);
+  	
+
+	 //'comp' 'human'
+	
+	//if (amzug=='human') zughuman();
+	resetbutton = createButton('Reset');
+  	resetbutton.position(1000, 100);
+  	//resetbutton.mousePressed(init);
+}
+
+
+
+
+
+
+function draw(){
+	background(204);
+	textSize(15);
+	text("Regeln:",10,30);
+ 	text("- Es wird abwechselnd weggenommen: Beliebig viele Hölzchen, aber immer nur aus einer Reihe (und mindestens eins)",10,60);
+	text("- Wer das letzte Hölzchen wegnimmt, gewinnt",10,90)
+	
+	text("Zeile:", 900, 450);
+  	text("Anzahl:", 900, 500);
+
+	var s1val = s1.value();
+  	var s2val = s2.value();
+  	
+  	text(s1val, 1150, 450);
+  	text(s2val, 1150, 500);
+
+  	//text(siegtext, 500,300);
+
+  	//text(errortext,1050,600);
+  	ellipse(500, 465, 20, 20);
+  	ellipse(500, 465 + 50, 20, 20);
+  	ellipse(500, 465 + 100, 20, 20);
+  	ellipse(500, 465 + 150, 20, 20);
+
+	for (i=1;i<5;i++){
+		if (game[i]%2==1){
+			anz = game[i];
+			verschieben = floor(anz /2 )-0.5;
+			for (x=0;x<anz;x++){
+				line(mittex - abstandx*verschieben+x*abstandx,mittey+50*i,mittex-abstandx*verschieben+x*abstandx,mittey+laenge+i*50);
+				//console.log(game[i], mittex - 30*verschieben+x*30,mittey+50*i,mittex-30*verschieben+x*30,mittey+laenge*i+10)
+			}
+
+		}
+		else {
+			anz = game[i];
+			verschieben = floor(anz /2 -1 );
+			for (x=0;x<anz;x++){
+				line(mittex - abstandx*verschieben+x*abstandx,mittey+50*i,mittex-abstandx*verschieben+x*abstandx,mittey+laenge+i*50);
+				//console.log(game[i], mittex - 30*verschieben+x*30,mittey+50*i,mittex-30*verschieben+x*30,mittey+50*i+10)
+			}
+		}
+
+	}
+
+}
+
+QiSession( connected, disconnected, location.host);
+
+function connected(s) {
+        console.log("connected");
+        session = s;
+        //readrepeat();
+        
+			session.service("ALMemory").then(function (mem) {
+            	mem.subscriber("09_onlinespiele/game").then(function (subscriber1) {
+                	subscriber1.signal.connect(function (state1){
+                		game = state1;
+						errorstring = state1;
+						errorupdate()
+                	});
+            	});
+            });
+}
+
+ function disconnected(error) {
+      console.log("disconnected");
+    }
+
+function errorupdate(){
+	document.getElementById("cons").innerHTML = errorstring;
+}
+
+</script>
+
+</body>
+</html>

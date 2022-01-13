@@ -1,0 +1,35 @@
+<html>
+<head>
+	
+	<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="./js/canvasdraw.js?xpr=67514"></script>
+	<script type="text/javascript" src="./lib/qimessaging/2/qimessaging.js"></script>
+	<script type="text/javascript" src="./js/qiFunctions.js"></script>
+ 	<script type="text/javascript" src="./js/tictactoe.js?xpr=67514"></script>
+	
+	<link rel=stylesheet href="./css/main.css">
+	<link rel=stylesheet href="./css/games.css">
+
+</head>
+<body>
+		<div class="gamelogo"><img src="img/logo_tictactoe.png" ></div>
+		<div id='ttt-board'>
+			<div style="top:10%;left:40%" class='border-vert'></div>
+			<div style="top:10%;left:65%" class='border-vert'></div>
+			<div style="top:35%;left:18%" class='border-hor'></div>
+			<div style="top:60%;left:18%" class='border-hor'></div>
+			<canvas height=40 width=40 class='ttt-can' id='col'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='com'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='cor'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='cml'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='cmm'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='cmr'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='cul'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='cum'></canvas>
+			<canvas height=40 width=40 class='ttt-can' id='cur'></canvas>
+		</div>
+		
+		
+</body>
+</html>
+

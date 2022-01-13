@@ -1,0 +1,27 @@
+topic: ~games_2()
+language: enu
+
+concept:(spiel) ["color_touch" "hat_game" "shells" "three_shells" "connect_four" "tic_tac_toe" "game" "something"]
+#concept:(spiel) ["hat_game" "shells" "three_shells" "game"]
+
+proposal:%game ^gotoReactivate(something)
+proposal:%something For Sure! We can play color touch \pau=150\ connect four \pau=150\ tic tac toe or the hat game? Which one do you want to play?
+u1:(color touch) ^gotoReactivate(color_touch)
+u1:(tic tac toe) ^gotoReactivate(tic_tac_toe)
+u1:(hat game) ^gotoReactivate(hat_game)
+u1:(connect four) ^gotoReactivate(connect_four)
+
+proposal:%color_touch Okay, lets begin $games_2/sensostart=1
+proposal:%tic_tac_toe Okay, lets begin $games_2/tictactoestart=1
+proposal:%hat_game Okay, lets begin $games_2/huetchenstart=1
+proposal:%shells Okay, lets begin $games_2/huetchenstart=1
+proposal:%three_shells Okay, lets begin $games_2/huetchenstart=1
+proposal:%connect_four Okay, lets begin $games_2/4gwstart=1
+
+
+u:({pepper} ["I want to play {a}" "can we play {a}" "do you want to play {a}" "lets play {a}" "do you have {any}"] _~spiel) ^gotoReactivate(^first[$1 game])
+
+u:("I give up" "stop the game")  $games_2/clearTablet=1
+
+u:(e:games_2/gameWin) $games_2/clearTablet=1 Super! You have defeated me! But next time I will win 
+u:(e:games_2/gameOver) $games_2/clearTablet=1 I'm sorry! Maybe next time

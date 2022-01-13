@@ -1,0 +1,26 @@
+topic: ~games_2()
+language: ged
+
+concept:(spiel) ["color_touch" "huetchen" "vier_gewinnt" "tick_tack_toh" "spiel" "etwas"]
+#concept:(spiel) ["huetchen" "spiel" "etwas"]
+
+proposal:%spiel ^gotoReactivate(etwas)
+proposal:%etwas Klar! Ich habe color touch, Vier Gewinnt, Tick Tack Toh und das Huetchen Spiel. Was möchtest du spielen?
+u1:(color touch) ^gotoReactivate(color_touch)
+u1:(tick tack toh) ^gotoReactivate(tick_tack_toh)
+u1:(huetchen) ^gotoReactivate(huetchen)
+u1:(vier gewinnt) ^gotoReactivate(vier_gewinnt)
+
+proposal:%color_touch Okay, ich starte das Spiel $games_2/sensostart=1
+proposal:%tick_tack_toh Okay, ich starte das Spiel $games_2/tictactoestart=1
+proposal:%huetchen Okay, ich starte das Spiel $games_2/huetchenstart=1
+proposal:%vier_gewinnt Okay, ich starte das Spiel $games_2/4gwstart=1
+
+
+u:({pepper} ["ich möchte {ein}" "können wir {ein}" "kann ich {ein} " "wollen wir {ein}" "lass uns {doch} {ein}"] _~spiel {mir dir} spielen) ^gotoReactivate(^first[$1 etwas])
+u:({pepper} ["ich möchte {ein}" "können wir {ein}" "kann ich {ein} " "wollen wir {ein}" "lass uns {doch} {ein}"] hütchenspielen) ^gotoReactivate(huetchen)
+
+u:(["ich gebe auf" "beende das spiel"]) $games_2/clearTablet=1
+
+u:(e:games_2/gameWin) $games_2/clearTablet=1 Du hast mich geschlagen! Aber das nächste Mal geht das anders aus!
+u:(e:games_2/gameOver) $games_2/clearTablet=1 Schade! Aber beim nächsten Mal klappt das bestimmt besser!

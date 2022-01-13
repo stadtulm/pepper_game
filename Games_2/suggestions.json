@@ -1,0 +1,30 @@
+{
+    "enu": {
+        "suggestions": [
+            "You can ask me: 'Let's play shells.'",
+            "You can ask me: 'Let's play color touch.'",
+            "You can ask me: 'Let's play tic tac toe.'",
+            "You can ask me: 'Let's play connect four.'"
+        ],
+        "texts": [
+            "lets play shells",
+            "lets play color_touch",
+            "lets play tic_tac_toe",
+            "lets play connect_four"
+        ]
+    },
+    "ged": {
+        "suggestions": [
+            "Du kannst zu mir sagen: 'Lass uns doch Hütchen spielen.'",
+            "Du kannst zu mir sagen: 'Lass uns doch Color Touch spielen.'",
+            "Du kannst zu mir sagen: 'Lass uns doch Tic Tac Toe spielen.'",
+            "Du kannst zu mir sagen: 'Lass uns doch Vier gewinnt spielen.'"
+        ],
+        "texts": [
+            "lass uns doch huetchen spielen",
+            "lass uns doch color_touch spielen",
+            "lass uns doch tick_tack_toh spielen",
+            "lass uns doch vier_gewinnt spielen"
+        ]
+    }
+}
