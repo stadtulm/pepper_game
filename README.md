@@ -28,6 +28,7 @@
     <li>Softbank Choregraphe suite (https://developer.softbankrobotics.com/)</li>
     <li>python (https://www.python.org/)</li> 
     <li>Softbank Pepper (python-version) </li>
+    <li>Javascript (https://de.wikipedia.org/wiki/JavaScript) </li>
   </ul> 
 
   <p align="right">(<a href="#top">back to top</a>)</p>
